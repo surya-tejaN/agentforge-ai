@@ -14,8 +14,8 @@ Each agent owns a stage of the software lifecycle, producing structured, product
 
 ## Live Demo
 
-- UI: https://app.agentforge.dev  
-- API: https://ponchoed-meri-unidly.ngrok-free.dev/run  
+- **UI:** https://app.agentforge.dev  
+- **API:** https://ponchoed-meri-unidly.ngrok-free.dev/run  
 
 Run the pipeline to generate a complete system from a single prompt.
 
@@ -38,29 +38,29 @@ Structured System Output
 
 AgentForge simulates a full engineering team using 8 specialized agents:
 
-### 1. Architect (AI)
-Designs system architecture, data flow, and high-level components.
+1. **Architect (AI)**  
+   Designs system architecture and data flow  
 
-### 2. Backend Engineer
-Defines service structure, business logic, and system modules.
+2. **Backend Engineer**  
+   Defines service logic and system structure  
 
-### 3. API Engineer
-Creates endpoints, request/response schemas, and routing design.
+3. **API Engineer**  
+   Creates endpoints and routing design  
 
-### 4. Reviewer (AI)
-Analyzes architecture and code decisions, suggests improvements.
+4. **Reviewer (AI)**  
+   Analyzes system and suggests improvements  
 
-### 5. Security Agent (AI)
-Identifies vulnerabilities, enforces authentication and data protection.
+5. **Security Agent (AI)**  
+   Identifies vulnerabilities and enforces protection  
 
-### 6. Debugger Agent
-Validates system consistency, identifies edge cases and failure points.
+6. **Debugger Agent**  
+   Detects inconsistencies and edge cases  
 
-### 7. Database Engineer
-Designs schema, storage strategy, indexing, and scalability.
+7. **Database Engineer**  
+   Designs schema and storage strategy  
 
-### 8. DevOps Agent
-Plans deployment architecture, CI/CD, scaling, and monitoring.
+8. **DevOps Agent**  
+   Plans deployment, scaling, and monitoring  
 
 ---
 
@@ -69,19 +69,16 @@ Plans deployment architecture, CI/CD, scaling, and monitoring.
 **Input**
 Build a fintech fraud detection system
 
-
 **Output (condensed)**
-
-Architect → microservices + event-driven design
+Architect → system architecture (microservices, data flow)
 Backend → service implementation
-API → REST endpoints
-Security → auth + data protection
+API → endpoints and routes
+Security → authentication and protection
 Database → schema design
 DevOps → deployment plan
 Reviewer → improvements
 
 Final → production-ready system blueprint
-
 
 ---
 
@@ -107,7 +104,7 @@ Key Insight
 
 Traditional AI tools generate isolated outputs.
 
-AgentForge produces coordinated results by distributing responsibility across agents, improving:
+AgentForge produces coordinated system outputs by distributing responsibilities across agents, improving:
 
 system structure
 reasoning depth
@@ -118,10 +115,10 @@ Real LLM integration via Backboard
 End-to-end system generation
 Live UI + backend execution
 Roadmap
-Expand agent intelligence with memory + feedback loops
-Add real code generation + deployment execution
-Integrate persistent project state
-Move toward fully autonomous software systems
+DevOps automation agent
+Security and compliance agent
+Full SDLC automation
+Production-ready system generation
 Author
 
 Surya Teja Nulu
@@ -131,16 +128,18 @@ Notes
 
 AgentForge demonstrates a shift from prompt-based AI toward structured, agent-driven system generation.
 
-
 ---
 
-# 🚀 AFTER PASTING
+# 🚀 WHAT YOU DO NOW
 
-Run:
+1. Open `README.md`
+2. **Select all → delete**
+3. Paste above
+4. Save
+
+Then run:
 
 ```bash
 git add .
-git commit -m "Upgrade README with 8-agent architecture"
+git commit -m "Fix README formatting (clean version)"
 git push
-
-
