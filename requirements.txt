@@ -1,0 +1,4 @@
+fastapi
+uvicorn
+jaseci>=0.13.5
+backboard-sdk>=0.1.0
