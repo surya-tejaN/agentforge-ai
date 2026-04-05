@@ -1,6 +1,7 @@
 # AgentForge AI
+Build complete software systems using coordinated AI agents instead of single LLM responses.
 
-Autonomous multi-agent system that designs, builds, and validates software using structured AI collaboration.
+An Autonomous multi-agent system that designs, builds, and validates software using structured AI collaboration.
 
 ## Overview
 
@@ -57,6 +58,11 @@ AgentForge simulates a full engineering team using 8 specialized agents:
     Reviewer → improvements
 
     Final → production-ready system blueprint
+## Why It Matters
+
+AgentForge moves beyond prompt-based AI and introduces structured, role-based system generation.
+
+It simulates how real engineering teams operate, making outputs more reliable, scalable, and production-ready.
 
 ## Tech Stack
 
@@ -106,9 +112,5 @@ AI Engineer — LLMs, RAG, Multi-Agent Systems
 
 AgentForge demonstrates a shift from prompt-based AI toward structured, agent-driven system generation.
 
-After that, run only these commands in terminal:
-git add .
-git commit -m "Finalize README"
-git push
 
 
