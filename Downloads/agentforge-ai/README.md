@@ -1,83 +1,146 @@
-git add .
-git commit -m "Final clean structure"
-git push# AgentForge AI 🚀
+# AgentForge AI
 
-**Autonomous Multi-Agent Development System** built with JAC and Backboard.
+Autonomous multi-agent system that designs, builds, and validates software using structured AI collaboration.
 
-## 🎯 Overview
+---
 
-CodeForge is a multi-agent system that simulates a real software development team. Each agent has a specialized role and collaborates through JAC's graph-native orchestration.
+## Overview
 
-## 🧠 Agents
+AgentForge transforms software development from a single LLM response into a coordinated system of specialized agents.
 
-1. **Architect (AI)** - Designs system architecture using Backboard API
-2. **Backend Engineer** - Structures server implementation
-3. **API Engineer** - Defines endpoints and routes
-4. **Reviewer (AI)** - Analyzes system for bugs and improvements using Backboard API
+Each agent owns a stage of the software lifecycle, producing structured, production-style outputs instead of unorganized text.
 
-## 🏗️ Architecture
+---
 
-```
-User Request
-    ↓
-JAC Walker (orchestrator)
-    ↓
-Python Bridge
-    ↓
-Backboard API (LLM)
-    ↓
+## Live Demo
+
+- UI: https://app.agentforge.dev  
+- API: https://ponchoed-meri-unidly.ngrok-free.dev/run  
+
+Run the pipeline to generate a complete system from a single prompt.
+
+---
+
+## System Design
+User Input
+↓
+JAC Orchestrator
+↓
 Multi-Agent Pipeline
-```
+↓
+Backboard (LLM reasoning)
+↓
+Structured System Output
 
-## 🛠️ Tech Stack
+---
 
-- **JAC** - Multi-agent orchestration
-- **Backboard** - LLM routing and memory
-- **Python** - API bridge (JAC ↔ Backboard)
+## Multi-Agent Pipeline
 
-## 🚀 Installation
+AgentForge simulates a full engineering team using 8 specialized agents:
+
+### 1. Architect (AI)
+Designs system architecture, data flow, and high-level components.
+
+### 2. Backend Engineer
+Defines service structure, business logic, and system modules.
+
+### 3. API Engineer
+Creates endpoints, request/response schemas, and routing design.
+
+### 4. Reviewer (AI)
+Analyzes architecture and code decisions, suggests improvements.
+
+### 5. Security Agent (AI)
+Identifies vulnerabilities, enforces authentication and data protection.
+
+### 6. Debugger Agent
+Validates system consistency, identifies edge cases and failure points.
+
+### 7. Database Engineer
+Designs schema, storage strategy, indexing, and scalability.
+
+### 8. DevOps Agent
+Plans deployment architecture, CI/CD, scaling, and monitoring.
+
+---
+
+## Example
+
+**Input**
+Build a fintech fraud detection system
+
+
+**Output (condensed)**
+
+Architect → microservices + event-driven design
+Backend → service implementation
+API → REST endpoints
+Security → auth + data protection
+Database → schema design
+DevOps → deployment plan
+Reviewer → improvements
+
+Final → production-ready system blueprint
+
+
+---
+
+## Tech Stack
+
+- JAC → multi-agent orchestration  
+- Backboard → LLM reasoning layer  
+- FastAPI → backend API  
+- Ngrok → public endpoint  
+- Lovable → UI interface  
+
+---
+
+## Run Locally
 
 ```bash
-# Install JAC
-pip install jaseci
+pip install -r requirements.txt
 
-# Install Backboard SDK
-pip install backboard-sdk
+uvicorn api_server:app --host 0.0.0.0 --port 8000 --reload
 
-# Set API key
-export BACKBOARD_API_KEY="your_key_here"
-```
+python3 -m jaclang run main.jac "Build a system"
+Key Insight
 
-## ▶️ Usage
+Traditional AI tools generate isolated outputs.
+
+AgentForge produces coordinated results by distributing responsibility across agents, improving:
+
+system structure
+reasoning depth
+real-world applicability
+Hackathon Focus
+Multi-agent orchestration using JAC
+Real LLM integration via Backboard
+End-to-end system generation
+Live UI + backend execution
+Roadmap
+Expand agent intelligence with memory + feedback loops
+Add real code generation + deployment execution
+Integrate persistent project state
+Move toward fully autonomous software systems
+Author
+
+Surya Teja Nulu
+AI Engineer — LLMs, RAG, Multi-Agent Systems
+
+Notes
+
+AgentForge demonstrates a shift from prompt-based AI toward structured, agent-driven system generation.
+
+
+---
+
+# 🚀 AFTER PASTING
+
+Run:
 
 ```bash
-python -m jaclang run main.jac "Build a fintech fraud detection system"
-```
+git add .
+git commit -m "Upgrade README with 8-agent architecture"
+git push
 
-## 📊 Example Output
 
-```
-🧠 [Architect] Analyzing requirements...
-💻 [Backend] Generating server code...
-🔌 [API] Creating endpoints...
-🔍 [Reviewer] Analyzing system...
-
-✅ CodeForge pipeline complete!
-```
-
-## 🎯 Hackathon Integration
-
-- ✅ **JAC** - Core orchestration (30% of judging)
-- ✅ **Backboard** - Real LLM integration
-- ✅ **Multi-agent** - Demonstrates agentic AI
-
-## 🔮 Future Vision
-
-- Add Security Agent
-- Add DevOps/Insforge deployment
-- Add Lovable UI dashboard
-- Expand to 8 specialized agents
-
-## 📝 License
-
-Built for JACHacks 2026
