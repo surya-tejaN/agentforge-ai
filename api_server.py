@@ -30,34 +30,17 @@ def options_run():
 def run_pipeline(prompt: str):
     global latest_output, is_running
     try:
-        # Mock responses for demonstration (jaclang has Python 3.9 compatibility issues)
-        mock_architecture = f"📐 ARCHITECTURE for '{prompt}':\n\n✅ Microservices-based system\n✅ RESTful API with Express.js\n✅ PostgreSQL database\n✅ Redis caching layer\n✅ JWT authentication"
-        
-        mock_backend = "💻 BACKEND: Express.js with middleware (cors, helmet, rate-limiter)"
-        
-        mock_api = "🔌 API ENDPOINTS:\n  POST /auth/signup\n  POST /auth/login\n  GET /api/data\n  POST /api/data"
-        
-        mock_review = "🔍 REVIEW: ✅ Security: PASS | ✅ Performance: GOOD | ✅ Scalability: EXCELLENT"
-        
-        latest_output = f"""
-🚀 CodeForge Pipeline Output
-{'='*60}
+        result = subprocess.run(
+            ["python3.12", "-m", "jaclang", "run", "main.jac", prompt],
+            capture_output=True,
+            text=True,
+            timeout=60
+        )
 
-🧠 ARCHITECT:
-{mock_architecture}
-
-💻 BACKEND ENGINEER:
-{mock_backend}
-
-🔌 API ENGINEER:
-{mock_api}
-
-🔍 REVIEWER:
-{mock_review}
-
-{'='*60}
-✅ Pipeline completed successfully!
-"""
+        if result.returncode != 0:
+            latest_output = f"Error:\n{result.stderr}"
+        else:
+            latest_output = result.stdout[:4000]
 
     except subprocess.TimeoutExpired:
         latest_output = "Timeout: pipeline took too long to finish."
