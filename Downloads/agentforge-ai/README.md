@@ -11,8 +11,9 @@ Each agent owns a stage of the software lifecycle and produces structured, produ
 
 ## Live Demo
 
-- **UI:** https://app.agentforge.dev
-- **API:** https://ponchoed-meri-unidly.ngrok-free.dev/run
+- **Product Demo:** https://code-orchestra-grid.lovable.app
+
+AgentForge converts a single prompt into a structured, multi-agent software system workflow.
 
 Run the pipeline to generate a complete system from a single prompt.
 
