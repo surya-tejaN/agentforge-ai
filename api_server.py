@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import subprocess
 import threading
+import sys
+import os
 
 app = FastAPI()
 
@@ -30,11 +32,15 @@ def options_run():
 def run_pipeline(prompt: str):
     global latest_output, is_running
     try:
+        # Use current Python interpreter (from venv312)
+        python_path = sys.executable
+        
         result = subprocess.run(
-            ["python3.12", "-m", "jaclang", "run", "main.jac", prompt],
+            [python_path, "-m", "jaclang", "run", "main.jac", prompt],
             capture_output=True,
             text=True,
-            timeout=60
+            timeout=60,
+            cwd=os.path.dirname(os.path.abspath(__file__))
         )
 
         if result.returncode != 0:
