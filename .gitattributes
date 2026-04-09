@@ -1,5 +1,16 @@
 *.jac linguist-language=JAC
 *.jac linguist-detectable=true
 *.py linguist-vendored=false
+
+# Exclude frontend from language stats
+src/** linguist-vendored=true
+*.css linguist-vendored=true
+*.html linguist-vendored=true
+*.js linguist-vendored=true
+vite.config.js linguist-vendored=true
+package.json linguist-vendored=true
+index.html linguist-vendored=true
+
+# Exclude venv
 venv*/** linguist-vendored=true
 agentforge-ai/** linguist-vendored=true
